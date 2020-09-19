@@ -342,10 +342,10 @@ template {
 * {
   margin: 0;
   padding: 0;
-  font-family: Arial, Helvetica, sans-serif;
 }
 
 body {
+  font-family: Arial, Helvetica, sans-serif;
   background-color: #35424A;
 }
 
@@ -360,20 +360,16 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 60px;
+  height: 100px;
   color: white;
-}
-
-header span {
-  color: #A9508B;
-}
-
-header #about {
-  color: #A9508B;
 }
 
 header h1 {
   margin-left: 20px;
+}
+
+header span {
+  color: #A9508B;
 }
 
 header li {
@@ -386,6 +382,46 @@ header a {
   color: white;
 }
 
+header #services {
+  color: #A9508B;
+}
+
+@media only screen and (max-width: 1024px) {
+  header h1 {
+    font-size: 24px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  header {
+    height: 60px;
+  }
+  header h1 {
+    font-size: 20px;
+  }
+  header a {
+    font-size: 12px;
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  header {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: 80px;
+  }
+  header h1 {
+    margin-left: 0;
+    margin-top: 20px;
+  }
+  header ul {
+    margin-left: 20px;
+    margin-bottom: 10px;
+  }
+}
+
 main .container1 {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -393,11 +429,12 @@ main .container1 {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  border-bottom: 2px solid #a9508b;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  height: 120px;
   color: white;
-  height: 80px;
 }
 
 main .container1 h2 {
@@ -408,17 +445,17 @@ main .container1 input {
   font-size: small;
   width: 300px;
   height: 30px;
-  text-indent: 0.5 em;
+  text-indent: 3px;
   margin-right: 15px;
 }
 
 main .container1 button {
+  color: white;
   background-color: #f74611;
   border: none;
-  color: white;
-  font-size: small;
-  width: 80px;
   height: 30px;
+  width: 80px;
+  font-size: small;
   margin-right: 20px;
 }
 
@@ -426,14 +463,17 @@ main .container2 {
   background-color: white;
   display: -ms-grid;
   display: grid;
+  height: 800px;
   width: 100%;
-  height: 735px;
 }
 
-main .container2 #section2, main .container2 #section3 {
-  background-color: #35424A;
-  color: white;
-  padding: 10px;
+main .container2 #section1,
+main .container2 #section2,
+main .container2 #section3 {
+  background-color: #dadada;
+  color: black;
+  padding: 20px 20px 40px 20px;
+  margin-bottom: 5px;
 }
 
 main .container2 div {
@@ -456,56 +496,197 @@ main .container2 div h4 {
 }
 
 main .container2 div p {
-  padding: 10px 0;
-  line-height: 1.2em;
+  padding-bottom: 20px;
+  line-height: 1.5em;
 }
 
-main .container2 section {
-  text-align: justify;
-}
-
-main .container2 #section3 {
+main .container2 #section4 {
   -ms-grid-column: 3;
   -ms-grid-column-span: 1;
   grid-column: 3/4;
+  height: 330px;
   margin: 20px;
-  height: 120px;
-  padding: 30px 20px;
+  padding: 10px 10px;
+  background-color: #35424a;
+  color: white;
 }
 
-main .container2 #section3 h4 {
-  padding-bottom: 20px;
+main .container2 #section4 h4 {
+  padding: 20px 0;
 }
 
-main .container2 #section3 p {
-  line-height: 1.2em;
+main .container2 #section4 label,
+main .container2 #section4 textarea,
+main .container2 #section4 input,
+main .container2 #section4 button {
+  display: block;
+  padding: 5px 0px;
+}
+
+main .container2 #section4 input {
+  width: 500px;
+  height: 20px;
+  font-size: small;
+  text-indent: 0.5em;
+}
+
+main .container2 #section4 textarea {
+  width: 500px;
+  height: 30px;
+  font-size: small;
+  text-indent: 0.5em;
+}
+
+main .container2 #section4 label {
+  font-size: 15px;
+}
+
+main .container2 #section4 button {
+  background-color: #f74611;
+  border: none;
+  color: white;
+  font-size: small;
+  height: 35px;
+  width: 60px;
+  margin-top: 10px;
+}
+
+@media only screen and (max-width: 1024px) {
+  main .container2 #section1,
+  main .container2 #section2,
+  main .container2 #section3 {
+    padding: 10px 20px;
+  }
+  main .container2 #section4 input,
+  main .container2 #section4 textarea {
+    width: 400px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  main .container1 {
+    height: 80px;
+  }
+  main .container1 h2 {
+    font-size: 18px;
+  }
+  main .container1 input {
+    width: 200px;
+  }
+  main .container2 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: auto;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  main .container2 #section4 {
+    margin-top: 0;
+  }
+  main .container2 #section4 input,
+  main .container2 #section4 textarea {
+    width: 450px;
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  main .container1 {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+  main .container1 h2 {
+    margin-left: 0px;
+  }
+  main .container1 input {
+    height: 25px;
+  }
+  main .container1 button {
+    height: 25px;
+  }
+  main .container2 #section4 input,
+  main .container2 #section4 textarea {
+    width: 320px;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  main .container2 #section4 input,
+  main .container2 #section4 textarea {
+    width: 290px;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  main .container1 h2 {
+    font-size: 16px;
+  }
+  main .container1 input {
+    width: 160px;
+    font-size: 12px;
+  }
+  main .container1 button {
+    margin-right: 0;
+    font-size: 12px;
+  }
+  main .container2 #section4 input,
+  main .container2 #section4 textarea {
+    width: 230px;
+  }
 }
 
 footer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-footer img {
-  width: 10%;
-  padding-bottom: 20px;
+  color: white;
 }
 
 footer p {
-  color: white;
-  font-size: small;
-  padding-top: 35px;
-  padding-bottom: 5px;
+  padding-top: 50px;
+  font-size: 18px;
 }
-/*# sourceMappingURL=index.css.map */
+
+@media only screen and (max-width: 768px) {
+  footer p {
+    padding-top: 20px;
+    font-size: 14px;
+  }
+  footer img {
+    width: 25%;
+    margin-bottom: 10px;
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  footer img {
+    margin-bottom: 10px;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  footer p {
+    font-size: 12px;
+  }
+}
+/*# sourceMappingURL=style.css.map */

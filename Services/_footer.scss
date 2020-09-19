@@ -1,16 +1,45 @@
-footer{
+footer {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
-    img{
-        width: 10%;
-        padding-bottom: 20px;;
+    color: white;
+
+    p {
+        padding-top: 50px;
+        font-size: 18px;
     }
-    p{
-        color: white;
-        font-size: small;
-        padding-top: 35px;
-        padding-bottom: 5px;
+}
+
+@media only screen and (max-width: 768px) {
+    footer {
+
+        p {
+            padding-top: 20px;
+            font-size: 14px;
+        }
+
+        img {
+            width: 25%;
+            margin-bottom: 10px;
+        }
+    }
+}
+
+@media only screen and (max-width: 425px) {
+    footer {
+
+        img {
+            margin-bottom: 10px;
+        }
+    }
+}
+
+@media only screen and (max-width: 375px) {
+    footer {
+
+        p {
+            font-size: 12px;
+        }
     }
 }
